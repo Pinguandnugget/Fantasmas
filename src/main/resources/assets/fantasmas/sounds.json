@@ -1,0 +1,17 @@
+{
+  "ghost_ambient": {
+    "sounds": [
+      "fantasmas:ghost.ambient"
+    ]
+  },
+  "ghost_hit": {
+    "sounds": [
+      "fantasmas:ghosthit"
+    ]
+  },
+  "ghost_death": {
+    "sounds": [
+      "fantasmas:death"
+    ]
+  }
+}
