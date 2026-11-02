@@ -22,9 +22,9 @@ private final software.bernie.geckolib.animatable.instance.AnimatableInstanceCac
  public String ghostColor() { return color; }
  @Override public software.bernie.geckolib.animatable.instance.AnimatableInstanceCache getAnimatableInstanceCache() { return animationCache; }
  @Override public void registerControllers(software.bernie.geckolib.animation.AnimatableManager.ControllerRegistrar controllers) {
-  controllers.add(new software.bernie.geckolib.core.animation.AnimationController<>(this, "ghost_controller", 5, state -> {
-   state.getController().setAnimation(software.bernie.geckolib.core.animation.RawAnimation.begin().thenLoop("animation.fantasmas.volando"));
-   return software.bernie.geckolib.core.object.PlayState.CONTINUE;
+  controllers.add(new software.bernie.geckolib.animation.AnimationController<>(this, "ghost_controller", 5, state -> {
+   state.getController().setAnimation(software.bernie.geckolib.animation.RawAnimation.begin().thenLoop("animation.fantasmas.volando"));
+   return software.bernie.geckolib.animation.PlayState.CONTINUE;
   }));
  }
  private final String color;
