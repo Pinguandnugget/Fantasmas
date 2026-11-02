@@ -2,12 +2,13 @@ plugins { id 'fabric-loom' version '1.9.2' }
 version = '0.2.0'
 group = 'com.potitosafio'
 base { archivesName = 'fantasmas' }
-repositories { mavenCentral(); maven { url 'https://maven.fabricmc.net/' } }
+repositories { mavenCentral(); maven { url 'https://maven.fabricmc.net/' }; maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' } }
 dependencies {
  minecraft "com.mojang:minecraft:${project.minecraft_version}"
  mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
  modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
  modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+ modImplementation "software.bernie.geckolib:geckolib-fabric-1.21.1:4.7.1.2"
 }
 processResources { inputs.property 'version', project.version; filesMatching('fabric.mod.json') { expand version: project.version } }
 tasks.withType(JavaCompile).configureEach { options.release = 21 }

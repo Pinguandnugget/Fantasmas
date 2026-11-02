@@ -32,6 +32,7 @@ public class FantasmasMod implements ModInitializer {
  public static final Map<String, Item> ESSENCES = new LinkedHashMap<>();
  public static Identifier id(String path) { return Identifier.of(ID, path); }
  @Override public void onInitialize() {
+  software.bernie.geckolib.GeckoLib.initialize();
   String[] colors = {"blanco", "amarillo", "rojo", "negro"};
   int[] eggColors = {0xEEEEEE,0xFFD23B,0xC02020,0x161616};
   for(int i=0;i<colors.length;i++) {

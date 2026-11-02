@@ -17,7 +17,16 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.util.math.Vec3d;
 
-public class GhostEntity extends PathAwareEntity {
+public class GhostEntity extends PathAwareEntity implements software.bernie.geckolib.animatable.GeoEntity {
+ private final software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache animationCache = software.bernie.geckolib.util.GeckoLibUtil.createInstanceCache(this);
+ public String ghostColor() { return color; }
+ @Override public software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache getAnimatableInstanceCache() { return animationCache; }
+ @Override public void registerControllers(software.bernie.geckolib.core.animation.AnimatableManager.ControllerRegistrar controllers) {
+  controllers.add(new software.bernie.geckolib.core.animation.AnimationController<>(this, "ghost_controller", 5, state -> {
+   state.getController().setAnimation(software.bernie.geckolib.core.animation.RawAnimation.begin().thenLoop("animation.fantasmas.volando"));
+   return software.bernie.geckolib.core.object.PlayState.CONTINUE;
+  }));
+ }
  private final String color;
  public GhostEntity(EntityType<? extends PathAwareEntity> type, World world, String color) {
   super(type,world);this.color=color;setNoGravity(true);
