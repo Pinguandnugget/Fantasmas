@@ -3,11 +3,14 @@
   "id": "fantasmas",
   "version": "${version}",
   "name": "Fantasmas",
-  "description": "Cuatro fantasmas del Limbo (prototipo t\u00e9cnico).",
+  "description": "Cuatro fantasmas del Limbo (prototipo técnico).",
   "environment": "*",
   "entrypoints": {
     "main": [
       "com.potitosafio.fantasmas.FantasmasMod"
+    ],
+    "client": [
+      "com.potitosafio.fantasmas.FantasmasClient"
     ]
   },
   "depends": {

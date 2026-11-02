@@ -1,0 +1,13 @@
+FANTASMAS 0.2.0 - CORRECCION INICIAL DEL CRASH
+
+Se registra un renderizador de cliente para cada fantasma.
+Renderizador TEMPORAL: modelo bipedo vanilla con textura del fantasma;
+NO es el modelo original Blockbench y su apariencia puede ser incorrecta.
+No se ha compilado ni probado este proyecto en Minecraft.
+
+Sube el contenido de esta carpeta a la raiz de tu repositorio GitHub
+y ejecuta GitHub Actions. Reemplaza el JAR antiguo en el cliente.
+No lo instales aun en tu servidor principal.
+
+Pendiente: modelos GeckoLib, animaciones, vuelo 3D completo,
+atravesar paredes, IA de manada y efectos de terror.
