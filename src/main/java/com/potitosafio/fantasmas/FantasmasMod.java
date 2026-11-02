@@ -40,7 +40,7 @@ public class FantasmasMod implements ModInitializer {
      EntityType.Builder.<GhostEntity>create((type,world)->new GhostEntity(type,world,color), SpawnGroup.MONSTER)
        .dimensions(0.8f,1.5f).maxTrackingRange(8).build("fantasma_"+color));
    GHOSTS.put(color,entity);
-   DefaultAttributeRegistry.register(entity,GhostEntity.attributes());
+   FabricDefaultAttributeRegistry.register(entity, GhostEntity.attributes());
    Item essence=Registry.register(Registries.ITEM,id("esencia_"+color),new Item(new Item.Settings()));
    ESSENCES.put(color,essence);
    Registry.register(Registries.ITEM,id("fantasma_"+color+"_spawn_egg"),
