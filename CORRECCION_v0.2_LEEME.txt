@@ -11,3 +11,15 @@ No lo instales aun en tu servidor principal.
 
 Pendiente: modelos GeckoLib, animaciones, vuelo 3D completo,
 atravesar paredes, IA de manada y efectos de terror.
+
+
+--- CORRECCION DE MODELOS (geo / animaciones) ---
+- geo.json regenerados desde blockbench_originales (formato Bedrock/GeckoLib, X espejada, sin invertir Y/Z,
+  texture_width/height = 32 = resolucion del proyecto; la PNG de 64x64 no se toca).
+- animations: golpear original de cada fantasma; volando del blanco para los 4.
+  Rojo/negro: hueso vacio "todo" como padre de sus 3 raices (geometria identica).
+- GhostEntity: reproduce golpear si isAttacking(), si no volando (antes: "prueba", que no existia).
+  "prueba" queda como alias de volando.
+- models/item/esencia_*.json: textura corregida (esencia_blanca/amarilla/roja/negra).
+- herramientas/: scripts de conversion y verificacion visual.
+No compilado en este entorno: ejecuta GitHub Actions.

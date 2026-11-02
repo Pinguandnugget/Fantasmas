@@ -23,7 +23,9 @@ private final software.bernie.geckolib.animatable.instance.AnimatableInstanceCac
  @Override public software.bernie.geckolib.animatable.instance.AnimatableInstanceCache getAnimatableInstanceCache() { return animationCache; }
  @Override public void registerControllers(software.bernie.geckolib.animation.AnimatableManager.ControllerRegistrar controllers) {
   controllers.add(new software.bernie.geckolib.animation.AnimationController<>(this, "ghost_controller", 5, state -> {
-   state.getController().setAnimation(software.bernie.geckolib.animation.RawAnimation.begin().thenLoop("animation.fantasmas.prueba"));
+   // Atacando -> animación original "golpear" de cada fantasma; si no -> "volando".
+   String anim = state.getAnimatable().isAttacking() ? "animation.fantasmas.golpear" : "animation.fantasmas.volando";
+   state.getController().setAnimation(software.bernie.geckolib.animation.RawAnimation.begin().thenLoop(anim));
    return software.bernie.geckolib.animation.PlayState.CONTINUE;
   }));
  }

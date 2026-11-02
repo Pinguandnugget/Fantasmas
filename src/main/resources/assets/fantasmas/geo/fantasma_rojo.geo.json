@@ -4,8 +4,8 @@
     {
       "description": {
         "identifier": "geometry.fantasmas.rojo",
-        "texture_width": 64,
-        "texture_height": 64,
+        "texture_width": 32,
+        "texture_height": 32,
         "visible_bounds_width": 4,
         "visible_bounds_height": 4,
         "visible_bounds_offset": [
@@ -16,18 +16,26 @@
       },
       "bones": [
         {
+          "name": "todo",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
           "name": "bone",
           "pivot": [
             0,
-            24,
+            0,
             0
           ],
           "cubes": [
             {
               "origin": [
-                -5,
-                14,
-                -4
+                -1,
+                4,
+                0
               ],
               "size": [
                 6,
@@ -41,9 +49,9 @@
             },
             {
               "origin": [
-                -4,
-                13,
-                -3
+                0,
+                10,
+                1
               ],
               "size": [
                 4,
@@ -57,9 +65,9 @@
             },
             {
               "origin": [
-                -5,
-                20,
-                -3
+                -1,
+                2,
+                1
               ],
               "size": [
                 6,
@@ -73,9 +81,9 @@
             },
             {
               "origin": [
-                -4,
-                22,
-                -3
+                0,
+                1,
+                1
               ],
               "size": [
                 4,
@@ -87,30 +95,32 @@
                 15
               ]
             }
-          ]
+          ],
+          "parent": "todo"
         },
         {
           "name": "brazo_izquierdo todo",
           "pivot": [
             0,
-            24,
+            0,
             0
-          ]
+          ],
+          "parent": "todo"
         },
         {
           "name": "brazo abajo izquierdo",
           "pivot": [
             0,
-            24,
+            0,
             0
           ],
           "parent": "brazo_izquierdo todo",
           "cubes": [
             {
               "origin": [
-                -8,
-                19,
-                -3
+                6,
+                1,
+                1
               ],
               "size": [
                 2,
@@ -121,15 +131,15 @@
                 0,
                 18
               ],
+              "pivot": [
+                8,
+                4,
+                0
+              ],
               "rotation": [
                 0,
                 0,
                 -2.5
-              ],
-              "pivot": [
-                -8,
-                20,
-                0
               ]
             }
           ]
@@ -138,16 +148,16 @@
           "name": "brazo izquierdo",
           "pivot": [
             0,
-            24,
+            0,
             0
           ],
           "parent": "brazo_izquierdo todo",
           "cubes": [
             {
               "origin": [
-                -8,
-                16,
-                -2
+                6,
+                7,
+                2
               ],
               "size": [
                 2,
@@ -158,22 +168,22 @@
                 20,
                 0
               ],
+              "pivot": [
+                8,
+                6,
+                -1
+              ],
               "rotation": [
                 0,
                 0,
                 -7.5
-              ],
-              "pivot": [
-                -8,
-                18,
-                1
               ]
             },
             {
               "origin": [
-                -8,
-                17,
-                -3
+                6,
+                5,
+                1
               ],
               "size": [
                 2,
@@ -184,15 +194,15 @@
                 18,
                 10
               ],
+              "pivot": [
+                8,
+                5,
+                0
+              ],
               "rotation": [
                 0,
                 0,
                 -5
-              ],
-              "pivot": [
-                -8,
-                19,
-                0
               ]
             }
           ]
@@ -201,24 +211,25 @@
           "name": "Brazo_derecho todo",
           "pivot": [
             0,
-            24,
+            0,
             0
-          ]
+          ],
+          "parent": "todo"
         },
         {
           "name": "brazo_abajo derecho",
           "pivot": [
             0,
-            24,
+            0,
             0
           ],
           "parent": "Brazo_derecho todo",
           "cubes": [
             {
               "origin": [
-                2,
-                19,
-                -3
+                -4,
+                1,
+                1
               ],
               "size": [
                 2,
@@ -229,15 +240,15 @@
                 0,
                 18
               ],
+              "pivot": [
+                -2,
+                4,
+                0
+              ],
               "rotation": [
                 0,
                 0,
                 2.5
-              ],
-              "pivot": [
-                2,
-                20,
-                0
               ]
             }
           ]
@@ -246,16 +257,16 @@
           "name": "brazo derecho",
           "pivot": [
             0,
-            24,
+            0,
             0
           ],
           "parent": "Brazo_derecho todo",
           "cubes": [
             {
               "origin": [
-                2,
-                17,
-                -3
+                -4,
+                5,
+                1
               ],
               "size": [
                 2,
@@ -266,22 +277,22 @@
                 18,
                 10
               ],
+              "pivot": [
+                -2,
+                5,
+                0
+              ],
               "rotation": [
                 0,
                 0,
                 5
-              ],
-              "pivot": [
-                2,
-                19,
-                0
               ]
             },
             {
               "origin": [
-                2,
-                16,
-                -2
+                -4,
+                7,
+                2
               ],
               "size": [
                 2,
@@ -292,15 +303,15 @@
                 20,
                 0
               ],
+              "pivot": [
+                -2,
+                6,
+                -1
+              ],
               "rotation": [
                 0,
                 0,
                 7.5
-              ],
-              "pivot": [
-                2,
-                18,
-                1
               ]
             }
           ]

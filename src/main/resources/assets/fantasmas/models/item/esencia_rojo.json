@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "fantasmas:item/esencia_rojo"
+    "layer0": "fantasmas:item/esencia_roja"
   }
 }
